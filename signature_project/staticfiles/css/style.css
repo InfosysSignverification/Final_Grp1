@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    min-height: 100vh;  /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #343a40;  /* Original header color */
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    flex-shrink: 0;  /* Prevent header from shrinking */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Added shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;  /* Make the title stand out */
+}
+
+/* Header Links Styling */
+nav a {
+    color: #ffc107;  /* Change link color to gold/yellow */
+    margin: 0 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;  /* Added smooth transition */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f8f9fa;  /* Change to light color on hover */
+}
+
+/* Home Page Content (Centering) */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;  /* Allow content to expand and fill the available space */
+    text-align: center;
+    padding: 40px 20px;  /* Added more padding for balance */
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;  /* Added animation */
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.home-content a {
+    font-size: 1.2rem;
+    color: #ffc107;  /* Gold color for links */
+    text-decoration: none;
+    margin: 10px;
+    transition: color 0.3s ease;  /* Added smooth transition */
+}
+
+.home-content a:hover {
+    text-decoration: underline;
+    color: #f8f9fa;  /* Lighter color for hover effect */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;  /* Position the footer relative to the page */
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);  /* Added shadow for depth */
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Increased shadow for form */
+    max-width: 500px;
+    margin: 20px auto;
+    transition: transform 0.3s ease;  /* Added smooth transition */
+}
+
+form:hover {
+    transform: translateY(-5px);  /* Subtle form hover effect */
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Result Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Error/Success Messages */
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Animation for Home Page Content */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+}

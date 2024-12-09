@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Verification Result</h1>
+<p><strong>Purpose:</strong> {{ purpose }}</p>
+<p><strong>Result:</strong> {{ result }}</p>
+<p><strong>Accuracy:</strong> {{ accuracy|floatformat:2 }}%</p>
+<p><strong>Image Path:</strong> {{ image }}</p> <!-- Debugging -->
+<img src="{{ image }}" alt="Uploaded Signature" style="max-width: 300px;">
+<a href="{% url 'verification' %}">Try Another</a>
+
+{% endblock %}
